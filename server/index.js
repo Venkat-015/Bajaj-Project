@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-app.post('/bfhl', (req, res) => {
+app.post('/', (req, res) => {
     const { data } = req.body;
 
     if (!Array.isArray(data)) {
@@ -26,7 +26,7 @@ app.post('/bfhl', (req, res) => {
     });
 });
 
-app.get('/bfhl', (req, res) => {
+app.get('/', (req, res) => {
     res.json({ operation_code: 1 });
 });
 
